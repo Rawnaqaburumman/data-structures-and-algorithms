@@ -36,7 +36,7 @@ const getNames = (arr) => {
   })
   return newArry;
 
-
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -95,7 +95,7 @@ const addBirthYearProperty = (obj, year) => {
   // Solution code here...
   obj.yearBorn=year;
 
-
+}
 
 
 /* ------------------------------------------------------------------------------------------------
@@ -145,6 +145,7 @@ DO NOT CHANGE any of the below code.
 Run your tests from the console: jest challenges-02.test.js
 
 ------------------------------------------------------------------------------------------------ */
+
 
 describe('Testing challenge 1', () => {
   test('It returns an array of names reversed', () => {
