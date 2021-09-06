@@ -26,6 +26,7 @@ Returns: ['dyoll', 'eimaj'];
   
 
 const getNames = (arr) => {
+
   // Solution code here...
   let newArry = [];
   newArry = arr.map((item) => {
@@ -34,7 +35,7 @@ const getNames = (arr) => {
     return join;
   })
   return newArry;
-};
+
 
 
 /* ------------------------------------------------------------------------------------------------
@@ -89,28 +90,30 @@ console.log(a) prints { fullName: 'Octavia Estelle Butler', yearBorn: 1947 }
 ------------------------------------------------------------------------------------------------ */
 
 
+
 const addBirthYearProperty = (obj, year) => {
   // Solution code here...
   obj.yearBorn=year;
-};
+
+
 
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5 - Stretch Goal
 
-Write a function that accepts an array of people objects and adds a new property called isAuthor to each object in the list. Set the value of the new property to true.
+// Write a function that accepts an array of people objects and adds a new property called isAuthor to each object in the list. Set the value of the new property to true.
 
-The function should modify the object in place. Do not use a return statement.
+// The function should modify the object in place. Do not use a return statement.
 
-For example:
-const people = [{ fullName: 'Octavia Butler' }, { fullName: 'Ray Bradbury' }];
-setStatusAsAuthor(people);
-console.log(people[1].isAuthor) prints true
------------------------------------------------------------------------------------------------- */
+// For example:
+// const people = [{ fullName: 'Octavia Butler' }, { fullName: 'Ray Bradbury' }];
+// setStatusAsAuthor(people);
+// console.log(people[1].isAuthor) prints true
+// ------------------------------------------------------------------------------------------------ */
 
-const setStatusAsAuthor = (people) => {
-  // Solution code here...
-};
+// const setStatusAsAuthor = (people) => {
+//   // Solution code here...
+// };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6 - Stretch Goal
