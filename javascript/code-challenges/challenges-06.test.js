@@ -22,14 +22,20 @@ For example:
 Returns: ['dyoll', 'eimaj'];
 ------------------------------------------------------------------------------------------------ */
 
+
+  
+
 const getNames = (arr) => {
-  debugger
-  let newArray = arr.map((item) => {
 
-    return item.name.split("").reverse().join("");
+  // Solution code here...
+  let newArry = [];
+  newArry = arr.map((item) => {
+    let reverse = item.name.split('').reverse();
+    let join = reverse.join('');
+    return join;
+  })
+  return newArry;
 
-  });
-  return newArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -46,6 +52,7 @@ Write a function that appends ' The end.' to a string, and returns the modified 
     const second = first + ' The end.';
     return second;
   };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -83,29 +90,30 @@ console.log(a) prints { fullName: 'Octavia Estelle Butler', yearBorn: 1947 }
 ------------------------------------------------------------------------------------------------ */
 
 
-const addBirthYearProperty = (x, date) => {
-  const object = x;
-  object.date = date;
-  return object;
-};
+
+const addBirthYearProperty = (obj, year) => {
+  // Solution code here...
+  obj.yearBorn=year;
+
+}
 
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5 - Stretch Goal
 
-Write a function that accepts an array of people objects and adds a new property called isAuthor to each object in the list. Set the value of the new property to true.
+// Write a function that accepts an array of people objects and adds a new property called isAuthor to each object in the list. Set the value of the new property to true.
 
-The function should modify the object in place. Do not use a return statement.
+// The function should modify the object in place. Do not use a return statement.
 
-For example:
-const people = [{ fullName: 'Octavia Butler' }, { fullName: 'Ray Bradbury' }];
-setStatusAsAuthor(people);
-console.log(people[1].isAuthor) prints true
------------------------------------------------------------------------------------------------- */
+// For example:
+// const people = [{ fullName: 'Octavia Butler' }, { fullName: 'Ray Bradbury' }];
+// setStatusAsAuthor(people);
+// console.log(people[1].isAuthor) prints true
+// ------------------------------------------------------------------------------------------------ */
 
-const setStatusAsAuthor = (people) => {
-  // Solution code here...
-};
+// const setStatusAsAuthor = (people) => {
+//   // Solution code here...
+// };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6 - Stretch Goal
@@ -137,6 +145,7 @@ DO NOT CHANGE any of the below code.
 Run your tests from the console: jest challenges-02.test.js
 
 ------------------------------------------------------------------------------------------------ */
+
 
 describe('Testing challenge 1', () => {
   test('It returns an array of names reversed', () => {
