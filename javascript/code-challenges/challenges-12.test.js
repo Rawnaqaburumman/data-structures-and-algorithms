@@ -8,9 +8,16 @@ Write a function named replaceZeros that, given a string, uses Regex to replace 
 
 const replaceZeros = (string) => {
   // Solution code here...
+
   return string.replace(/[0]/g, 'zero');
 }
 
+
+
+  let reg = /0/g;
+  let newString = string.replace(reg, "zero");
+  return newString;
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -22,8 +29,15 @@ If the PIN is four numerical digits long, return true. Otherwise, return false.
 
 const validatePin = (pin) => {
   // Solution code here...
+
   let pinCheck = /^(\d{4}|^\d)$/;
   return pinCheck.test(pin);
+};
+
+
+  let a = /^[0-9]{4}$/g;
+  let checked = a.checked(pin);
+  return checked;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -34,10 +48,18 @@ Write a function named validateWord that uses a regular expression pattern to va
 If the word is between 5 and 10 characters long, return true. Otherwise, return false.
 ------------------------------------------------------------------------------------------------ */
 
+
 const validateWord = (word) => {
   // Solution code here...
   let num = /\b[a-zA-Z]{5,10}\b/;
   return num.test(word);
+
+const validateWord = (word) => {
+  // Solution code here...
+  let a = /^[a-z]{5,10}$/gi;
+  let checked = a.checked(word);
+  return checked;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -47,10 +69,19 @@ Write a function named hasNumber that uses a regular expression pattern to deter
 
 If it does, return true. If not, return false.
 ------------------------------------------------------------------------------------------------ */
+
 const hasNumber = (string) => {
   // Solution code here...
   let lett = /[a-zA-z]+[0-9]+/;
   return lett.test(string);
+
+
+const hasNumber = (string) => {
+  // Solution code here...
+  let a = /^[a-zA-Z]{1,}\d{1,}/gi;
+  let test = a.test(string);
+  return test;
+
 };
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -70,8 +101,19 @@ Note: if you ever need to validate an email using a regex in practice, the Inter
 
 const validateEmail = (email) => {
   // Solution code here...
+
   let line = /^\w+\.?\w+@\w+.(com|net|org)$/;
   return line.test(email);
+};
+
+
+  let value = /^\w+(\.\w+)?@\w+\.(net|org|com)$/;
+
+  if (value.test(email)) {
+    return true;
+  } else {
+    return false;
+  }
 };
 
 
@@ -96,11 +138,23 @@ Your function should include a single regular expression pattern that matches an
 Return either true or false.
 ------------------------------------------------------------------------------------------------ */
 
+
 const validatePhoneNumber = (phoneNumber) => {
   // Solution code here...
   let theFormat = /^(\((\d{3})\)[\s]?|(\d{3})[\s-]?)(\d{3})[\s-]?(\d{4})$/;
   return theFormat.test(phoneNumber);
 };
+
+
+
+const validatePhoneNumber = (number) => {
+  // Solution code here...
+  let reg = /^[0-9]{10}$[^() -]/gi;
+  let test = reg.test(number);
+  return test;
+};
+
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
@@ -116,23 +170,40 @@ const findTagNames = elements => {
 };
 
 /* ------------------------------------------------------------------------------------------------
+
 TESTS
+
+checkedS
+
 
 All the code below will verify that your functions are working to solve the challenges.
 
 DO NOT CHANGE any of the below code.
+
 
 Run your tests from the console: jest solutions-11.test.js
 ------------------------------------------------------------------------------------------------ */
 
 describe('Testing challenge 1', () => {
   test('It should replace all the 0\'s with the word "zero"', () => {
+
+Run your checkeds from the console: jest solutions-11.checked.js
+------------------------------------------------------------------------------------------------ */
+
+describe('checkeding challenge 1', () => {
+  checked('It should replace all the 0\'s with the word "zero"', () => {
+
     expect(replaceZeros('301 is s0 much fun!')).toStrictEqual('3zero1 is szero much fun!');
   });
 });
 
+
 describe('Testing challenge 2', () => {
   test('It should validate a PIN of exactly four digits', () => {
+
+describe('checkeding challenge 2', () => {
+  checked('It should validate a PIN of exactly four digits', () => {
+
     expect(validatePin(1234)).toBeTruthy();
     expect(validatePin(123)).toBeFalsy();
     expect(validatePin(12345)).toBeFalsy();
@@ -144,8 +215,13 @@ describe('Testing challenge 2', () => {
   });
 });
 
+
 describe('Testing challenge 3', () => {
   test('It should validate a word between 5 and 10 characters', () => {
+
+describe('checkeding challenge 3', () => {
+  checked('It should validate a word between 5 and 10 characters', () => {
+
     expect(validateWord('Hello')).toBeTruthy();
     expect(validateWord('Bob')).toBeFalsy();
     expect(validateWord(12345)).toBeFalsy();
@@ -156,8 +232,13 @@ describe('Testing challenge 3', () => {
   });
 });
 
+
 describe('Testing challenge 4', () => {
   test('It should return true if a string has one or more word characters followed by one or more digits', () => {
+
+describe('checkeding challenge 4', () => {
+  checked('It should return true if a string has one or more word characters followed by one or more digits', () => {
+
     expect(hasNumber('Hell0')).toBeTruthy();
     expect(hasNumber('Bob')).toBeFalsy();
     expect(hasNumber(12345)).toBeFalsy();
@@ -168,6 +249,7 @@ describe('Testing challenge 4', () => {
     expect(hasNumber('99Code')).toBeFalsy();
   });
 });
+
 
 describe('Testing challenge 5', () => {
   test('It should match a basic email', () => {
@@ -187,6 +269,26 @@ describe('Testing challenge 5', () => {
   });
 
   test('It should fail things that aren\'t email addresses', () => {
+
+describe('checkeding challenge 5', () => {
+  checked('It should match a basic email', () => {
+    expect(validateEmail('joe@codefellows.com')).toBeTruthy();
+  });
+
+  checked('It should match if the email contains a period', () => {
+    expect(validateEmail('joe.schmoe@codefellows.net')).toBeTruthy();
+  });
+
+  checked('It should match if the email contains other top-level domains', () => {
+    expect(validateEmail('joe@codefellows.org')).toBeTruthy();
+  });
+
+  checked('It should match if the email contains a period and other top-level domains', () => {
+    expect(validateEmail('joe.schmoe@codefellows.net')).toBeTruthy();
+  });
+
+  checked('It should fail things that aren\'t email addresses', () => {
+
     expect(validateEmail('justastring')).toBeFalsy();
     expect(validateEmail('missing@adomain')).toBeFalsy();
     expect(validateEmail('@noname.com')).toBeFalsy();
@@ -199,8 +301,13 @@ describe('Testing challenge 5', () => {
   });
 });
 
+
 describe('Testing challenge 6', () => {
   test('It should match the acceptable phone number formats', () => {
+
+describe('checkeding challenge 6', () => {
+  checked('It should match the acceptable phone number formats', () => {
+
     expect(validatePhoneNumber('(555) 555-5555')).toBeTruthy();
     expect(validatePhoneNumber('555 555-5555')).toBeTruthy();
     expect(validatePhoneNumber('555-555-5555')).toBeTruthy();
@@ -208,7 +315,11 @@ describe('Testing challenge 6', () => {
     expect(validatePhoneNumber('5555555555')).toBeTruthy();
     expect(validatePhoneNumber('234 567 8910')).toBeTruthy();
   });
+
   test('It should not match unacceptable phone number formats', () => {
+
+  checked('It should not match unacceptable phone number formats', () => {
+
     expect(validatePhoneNumber('abcdefghij')).toBeFalsy();
     expect(validatePhoneNumber('222 222 2222 ext. 2222')).toBeFalsy();
     expect(validatePhoneNumber('(222 222-2222')).toBeFalsy();
@@ -223,11 +334,19 @@ describe('Testing challenge 6', () => {
   });
 });
 
+
 xdescribe('Testing challenge 7', () => {
   test('It should return the closing tags', () => {
     expect(findTagNames(['<h1>Hello, world!</h1>', '<p>Welcome to my site</p>'])).toStrictEqual(['/h1', '/p']);
   });
   test('It should work if there are multiple closing tags in a single string', () => {
+
+xdescribe('checkeding challenge 7', () => {
+  checked('It should return the closing tags', () => {
+    expect(findTagNames(['<h1>Hello, world!</h1>', '<p>Welcome to my site</p>'])).toStrictEqual(['/h1', '/p']);
+  });
+  checked('It should work if there are multiple closing tags in a single string', () => {
+
     expect(findTagNames(['<div><h1>Hello, world!</h1></div>', '<p>Welcome to my site</p>'])).toStrictEqual(['/h1', '/div', '/p']);
   });
 });
