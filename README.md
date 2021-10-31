@@ -24,4 +24,4 @@ To run your tests
 
 |Code Challenge|Link|
 |------|------|
-|array-reverse|[readme](https://github.com/HaneenHaashlamoun/data-structures-and-algorithms/blob/array-reerse/python/code_challenges/array-reverse/README.md)|
+|array-reverse|[readme](https://github.com/Rawnaqaburumman/data-structures-and-algorithms/blob/main/python/code_challenges/array-reverse/read.md)|
