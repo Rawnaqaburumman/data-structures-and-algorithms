@@ -25,3 +25,5 @@ To run your tests
 |Code Challenge|Link|
 |------|------|
 |array-reverse|[readme](https://github.com/Rawnaqaburumman/data-structures-and-algorithms/blob/main/python/code_challenges/array-reverse/read.md)|
+|array-insert-shift|[readme](https://github.com/Rawnaqaburumman/data-structures-and-algorithms/blob/main/python/code_challenges/array-insert-shift/Read.md)|
+
