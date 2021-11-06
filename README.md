@@ -32,4 +32,4 @@ To run your tests
 
 |Code Challenge|Link|
 |------|------|
-|singly linked list |[readme](https://github.com/Rawnaqaburumman/data-structures-and-algorithms/blob/main/python/code_challenges/array-reverse/read.md)|
+|singly linked list |[readme](https://github.com/Rawnaqaburumman/data-structures-and-algorithms/blob/main/python/linked_list/readme.md)|
