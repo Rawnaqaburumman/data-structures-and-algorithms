@@ -30,7 +30,8 @@
 - Will return false when searching for a value in the linked list that does not exist
 - Can properly return a collection of all the values that exist in the linked list
 ## Approach & Efficiency
-approaching the code using algorithemes and is efficient as a test results are shown.
+- approaching the code using algorithemes and is efficient as a test results are shown.
+- Cost of accessing an element: O(n)
 
 ## API
 - insert : add a new value in the begining of linked List.
