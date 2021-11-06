@@ -5,6 +5,7 @@ def BinarySearch(array,key):
   m=0
   while i<=j :
       m=(i+j)//2
+      print(m)
       if array[m]<key:
        i=m+1
       elif array[m] > key:
