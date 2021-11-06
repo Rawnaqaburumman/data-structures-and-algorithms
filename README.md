@@ -30,6 +30,6 @@ To run your tests
 
 ### 401 Data Structures:
 
-|Code Challenge|Link|
+|Data structure |Link|
 |------|------|
 |singly linked list |[readme](https://github.com/Rawnaqaburumman/data-structures-and-algorithms/blob/main/python/linked_list/readme.md)|
