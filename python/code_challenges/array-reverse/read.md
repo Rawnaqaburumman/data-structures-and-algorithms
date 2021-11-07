@@ -3,7 +3,9 @@ Some times we need to reserve the order of things, like lists and data sets, esp
 this algorithem take any array and reserve it.
 
 ## Whiteboard Process
-![code 1](array-reserve.PNG)
+
+![code 1](/python/code_challenges/array-reverse/array_reserved.PNG)
+
 
 ## Approach & Efficiency
 <!-- What approach did you take? Discuss Why. What is the Big O space/time for this approach? -->
