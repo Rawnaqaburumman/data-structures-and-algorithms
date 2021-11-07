@@ -80,29 +80,32 @@ class LinkedList:
                 if current.value==value:
                    current.next= node
                    oldnode.next= node.next
-                   print(node.next)
-                   return ll
+                   break
+
+
                 else:
                       current=current.next
 
 
 
-    def insert_before(self,value,new):
-       current = self.head
-       node = Node(new)
-       oldnode=Node(value)
 
-       while current.next != None:
-                if current.value==value:
-                   
+    def insert_before(self,val,new):
+        """
+        Method to add values before a specifc node
+        """
+        node=Node(new)
+        if self.head == None:
+            self.head = node
+        else:
+            current=self.head
+        while current.next != None:
 
-
-
-
-                    return ll
-                else:
-                      current=current.next
-
+            if current.next.value == val:
+                node.next = current.next
+                current.next = node
+                break
+            else:
+                current = current.next
 
 
 if __name__=="__main__":
