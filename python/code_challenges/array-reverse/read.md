@@ -8,4 +8,6 @@ this algorithem take any array and reserve it.
 
 
 ## Approach & Efficiency
-<!-- What approach did you take? Discuss Why. What is the Big O space/time for this approach? -->
+Big(o) on
+space on 
+this algorithem can reserve the array in one step
