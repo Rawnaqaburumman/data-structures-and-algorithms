@@ -7,6 +7,10 @@ class Node:
         self.value = value
         self.next = None
 
+    def __str__(self):
+
+      return f" {self.value} and the next {self.next}"
+
 class LinkedList:
 
     """
@@ -45,15 +49,15 @@ class LinkedList:
     def include(self,value):
 
         """
-        include methode to search if the linked list include the values 
+        include methode to search if the linked list include the values
         """
         current = self.head
         while current.next != None:
                 if current.value==value:
-                 return True
-                else:
-                    return False
 
+                 return True
+                current=current.next
+        return False
 
     def __str__(self):
         output = "head -> "
@@ -67,15 +71,51 @@ class LinkedList:
             output += "Null"
             return output
 
+    def insert_after(self,value,new):
+       current = self.head
+       node = Node(new)
+       oldnode=Node(value)
+       print(node)
+       while current.next != None:
+                if current.value==value:
+                   current.next= node
+                   oldnode.next= node.next
+                   print(node.next)
+                   return ll
+                else:
+                      current=current.next
 
-# if __name__=="__main__":
-#  ll = LinkedList()
 
-#  ll.append(1)
-#  ll.append(2)
-#  ll.append(3)
-#  ll.append(4)
-# print(ll)
+
+    def insert_before(self,value,new):
+       current = self.head
+       node = Node(new)
+       oldnode=Node(value)
+
+       while current.next != None:
+                if current.value==value:
+                   
+
+
+
+
+                    return ll
+                else:
+                      current=current.next
+
+
+
+if __name__=="__main__":
+ ll = LinkedList()
+
+ ll.append(1)
+ ll.append(2)
+ ll.append(3)
+ ll.append(4)
+ print(ll)
+#  ll.insert_after(2,9)
+ ll.insert_before(3,7)
+ print(ll)
 # "head -> 1 -> 2 -> 3 -> 4 -> None"
 
 
