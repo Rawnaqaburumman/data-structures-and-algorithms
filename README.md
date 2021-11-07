@@ -18,6 +18,18 @@ To run your tests
 - run `npm test` to run all of the tests
 - run `npm test ##` to only run tests for challenge ## (i.e. 01)
 
-### 401 Data Structures, Code Challenges
+### 401 Code Challenges
 
 - Please follow the instructions specific to your 401 language, which can be found in the directory below, matching your course.
+
+|Code Challenge|Link|
+|------|------|
+|array-reverse|[readme](https://github.com/Rawnaqaburumman/data-structures-and-algorithms/blob/main/python/code_challenges/array-reverse/read.md)|
+|array-insert-shift|[readme](https://github.com/Rawnaqaburumman/data-structures-and-algorithms/blob/main/python/code_challenges/array-insert-shift/Read.md)|
+|BinarySearch|[readme](https://github.com/Rawnaqaburumman/data-structures-and-algorithms/blob/main/python/code_challenges/array-binary-search/ReadMe.md)|
+
+### 401 Data Structures:
+
+|Data structure |Link|
+|------|------|
+|singly linked list |[readme](https://github.com/Rawnaqaburumman/data-structures-and-algorithms/blob/main/python/linked_list/readme.md)|
