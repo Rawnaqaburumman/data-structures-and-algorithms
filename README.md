@@ -33,3 +33,4 @@ To run your tests
 |Data structure |Link|
 |------|------|
 |singly linked list |[readme](https://github.com/Rawnaqaburumman/data-structures-and-algorithms/blob/main/python/linked_list/readme.md)|
+| linked list insertion| [readme](https://github.com/Rawnaqaburumman/data-structures-and-algorithms/blob/main/python/linked_list/readme2.md)|
