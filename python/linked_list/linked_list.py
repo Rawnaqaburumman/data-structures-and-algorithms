@@ -1,7 +1,7 @@
 class Node:
 
     """
-    Node class
+    Node class to create nodes
     """
     def __init__(self, value):
         self.value = value
@@ -74,7 +74,7 @@ class LinkedList:
     def insert_after(self, value,new):
 
         """
-        insert a new value after any value in the linked list
+        insert a new value after any value in the linked_list
         """
         current = self.head
         while current is not None:
@@ -109,7 +109,6 @@ class LinkedList:
 
 #=============================================================================
 if __name__=="__main__":
-
 
   ll = LinkedList()
   ll.append(2)
