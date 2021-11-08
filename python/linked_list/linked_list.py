@@ -10,7 +10,7 @@ class Node:
     def __str__(self):
 
       return f" {self.value} and the next {self.next}"
-
+#====================================== Class LinkedList and methodes =====================================
 class LinkedList:
 
     """
@@ -18,7 +18,7 @@ class LinkedList:
     """
     def __init__(self):
         self.head = None
-
+    #==============================append methode==========================================
     def append(self, value):
         """
         append methode used to add values at the end of linked list
@@ -31,7 +31,7 @@ class LinkedList:
             while current.next != None:
                 current = current.next
             current.next = node
-
+    #=====================================insert methode======================================
     def insert(self,value):
 
      """
@@ -45,7 +45,7 @@ class LinkedList:
      else:
          self.head=node
 
-
+    #==================================include methode===========================================
     def include(self,value):
 
         """
@@ -58,7 +58,7 @@ class LinkedList:
                  return True
                 current=current.next
         return False
-
+    #======================================str =========================================
     def __str__(self):
         output = "head -> "
         if self.head is None:
@@ -70,24 +70,24 @@ class LinkedList:
                 current = current.next
             output += "Null"
             return output
+    #======================================insert after========================================
+    def insert_after(self, value,new):
 
-    def insert_after(self,value,new):
-       current = self.head
-       node = Node(new)
-       oldnode=Node(value)
-       print(node)
-       while current.next != None:
-                if current.value==value:
-                   current.next= node
-                   oldnode.next= node.next
-                   break
+        """
+        insert a new value after any value in the linked list
+        """
+        current = self.head
+        while current is not None:
+            if current.value == value:
+                break
+            current = current.next
+
+            new_node = Node(new)
+            new_node.next = current.next
+            current.next = new_node
 
 
-                else:
-                      current=current.next
-
-
-
+    #============================insert before======================================
 
     def insert_before(self,val,new):
         """
@@ -107,18 +107,19 @@ class LinkedList:
             else:
                 current = current.next
 
-
+#=============================================================================
 if __name__=="__main__":
- ll = LinkedList()
 
- ll.append(1)
- ll.append(2)
- ll.append(3)
- ll.append(4)
- print(ll)
-#  ll.insert_after(2,9)
- ll.insert_before(3,7)
- print(ll)
+
+  ll = LinkedList()
+  ll.append(2)
+  ll.append(5)
+  ll.insert(9)
+  print(ll)
+  ll.insert_after(2,7)
+#   ll.insert_after(2,7)
+  print(ll)
+
 # "head -> 1 -> 2 -> 3 -> 4 -> None"
 
 

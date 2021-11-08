@@ -1,1 +1,2 @@
- # hold.next=current
+
+                if current.value==value:

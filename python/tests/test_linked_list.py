@@ -83,3 +83,65 @@ def test_return_all():
     actual=str(ll)
     expected = "head -> {1} -> {2} -> {3} -> {4} -> Null"
     assert actual == expected
+
+
+def test_append():
+    """
+    Can successfully add a node and multiple nodes to the end of the linked list
+    """
+    ll=LinkedList()
+    ll.append(1)
+    ll.append(2)
+    ll.append(3)
+    ll.append(4)
+    ll.append(5)
+    actual = str(ll)
+    excepted  = "head -> {1} -> {2} -> {3} -> {4} -> {5} -> Null"
+
+    assert actual == excepted
+
+
+def test_insert_before():
+    """
+    Can successfully insert a node before a node located i the middle of a linked list
+    """
+    ll=LinkedList()
+    ll.append(1)
+    ll.append(2)
+    ll.insert_before(2,7)
+    actual = str(ll)
+    excepted  = "head -> {1} -> {7} -> {2} -> Null"
+    assert actual == excepted
+
+
+def test_insert_after():
+
+        """
+Can successfully insert after a node in the middle of the linked list
+        """
+        ll=LinkedList()
+        ll.append(1)
+        ll.append(2)
+        ll.insert_after(2,7)
+        actual = str(ll)
+        excepted  = "head -> {1} -> {2} -> {7} -> Null"
+        assert actual == excepted
+
+
+
+def test_linked_list_insert_after_last():
+    """
+    Can successfully insert a node after the last node of the linked list
+    """
+
+    ll = LinkedList()
+    ll.append(2)
+    ll.append(5)
+    ll.insert(9)
+
+    ll.insert_after(2,7)
+    expected = "head -> {9} -> {2} -> {7} -> {5} -> Null"
+    actual = str(ll)
+
+
+    assert actual == expected
