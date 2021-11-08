@@ -1,0 +1,2 @@
+
+                if current.value==value:
