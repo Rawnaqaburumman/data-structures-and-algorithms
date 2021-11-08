@@ -20,7 +20,7 @@ adds a new node with the given new value immediately after the first node that h
 - Can successfully insert after a node in the middle of the linked list
 - Can successfully insert a node after the last node of the linked list
 ## Whiteboard Process
-![x](linkedlist.jpg)
+![x](linkedlist.PNG)
 
 ## Approach & Efficiency
 Classes and methods , nodes and and linked lists.
@@ -32,3 +32,4 @@ Classes and methods , nodes and and linked lists.
 
 ## Solution
 <!-- Show how to run your code, and examples of it in action -->
+The solution is the algorithem and a test files inside a linked list folder
