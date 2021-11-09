@@ -1,3 +1,6 @@
+
+
+
 class Node:
 
     """
@@ -55,21 +58,22 @@ class LinkedList:
         """
 
         if k<0:
-            return "'k' value was rejected --> negative value"
+            return f"{k} value was rejected --> negative value"
 
 
         count=0
         current = self.head
+        if current.next == None:
+          return " the linked list size is 1 "
         while current.next != None:
          current=current.next
          count+=1
          diff=count-k
-         print(count)
 
         if count+1 ==k:
-            return "'k' value was rejected --> k= length of linked list/out the range "
+            return f"{k} value was rejected --> k= length of linked list/out the range "
         elif diff<0:
-            return "'k' value was rejected --> out the range"
+            return f"{k} value was rejected --> out the range"
 
         else:
          current = self.head.next
@@ -82,11 +86,12 @@ class LinkedList:
 
 if __name__=="__main__":
 
-  ll = LinkedList()
-  ll.append(6)
-
-  print(ll)
-  print(ll.kthFromEnd(4))
+    ll=LinkedList()
+    ll.append(1)
+    ll.append(2)
+    ll.append(3)
+    ll.append(4)
+    print(ll.kthFromEnd(2))
 
 
 
