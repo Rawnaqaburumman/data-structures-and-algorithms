@@ -76,15 +76,18 @@ class LinkedList:
         """
         insert a new value after any value in the linked_list
         """
-        current = self.head
-        while current is not None:
-            if current.value == value:
-                break
-            current = current.next
 
-            new_node = Node(new)
-            new_node.next = current.next
-            current.next = new_node
+        node=Node(new)
+        if self.head is None:
+            self.head = node
+        else:
+            current=self.head
+            while current.next != None:
+                current = current.next
+                if current.value == value:
+                    node.next = current.next
+                    current.next = node
+                    break
 
 
     #============================insert before======================================
