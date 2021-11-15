@@ -35,3 +35,4 @@ To run your tests
 |singly linked list |[readme](https://github.com/Rawnaqaburumman/data-structures-and-algorithms/blob/main/python/linked_list/readme.md)|
 | linked list insertion| [readme](https://github.com/Rawnaqaburumman/data-structures-and-algorithms/blob/main/python/linked_list/readme2.md)|
 |linked list kth| [readme](https://github.com/Rawnaqaburumman/data-structures-and-algorithms/blob/main/python/linked_list/linked_list_kth/readme.md)|
+|Stack and queue| [readme](https://github.com/Rawnaqaburumman/data-structures-and-algorithms/blob/main/python/code_challenges/stack_and_queue/read.md)
