@@ -44,12 +44,6 @@ dtype: float64
 
 >`data[(data['column_1']=='french') & (data['year_born']==1990) & ~(data['city']=='London')]`
 
-## Basic plotting
-
-This feature is made possible thanks to the matplotlib package. As we said in the intro, it’s usable directly in pandas.
->`data['column_numerical'].plot()`
-
-![plot](https://miro.medium.com/max/489/1*QyYuLym-PSTQk_3MYt81VA.png)
 
 ## Updating the data
 >`data.loc[8, 'column_1'] = 'english'`
@@ -74,14 +68,8 @@ When working with large datasets, pandas can take some time running .map(), .app
 
 >`tqdm_notebook().pandas()`
 
-![ex](https://miro.medium.com/max/713/1*uerveZ-vqCl5sTyaeRLwSw.gif)
 
-## Correlation and scatter matrices
->`data.corr()`
 
->`data.corr().applymap(lambda x: int(x*100)/100)`
-
-![ex](https://miro.medium.com/max/875/1*VcCx97BF-kTMpzxbxPDqXg.png)
 
 
 # Advanced operations in pandas
