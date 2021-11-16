@@ -13,4 +13,15 @@ def test_brackets_in_the_string_arent_balanced():
     excepted= False
     assert actual == excepted
 
-def test_
+def test_no_brackets():
+    actual = multi_bracket_validation("---aa")
+    excepted= False
+    assert actual == excepted
+
+
+def test_empyt_string():
+    actual = multi_bracket_validation("")
+    excepted= False
+    assert actual == excepted
+
+

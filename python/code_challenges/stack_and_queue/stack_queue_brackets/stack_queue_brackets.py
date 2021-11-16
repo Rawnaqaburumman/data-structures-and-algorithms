@@ -1,14 +1,16 @@
 
 def multi_bracket_validation(input):
 
-    input=str(input)
 
 
     pairs = {"{": "}", "(": ")", "[": "]"}
     stack = []
+    count=0
 
     for c in input:
         if c.isalpha() or c not in ["{","}","(",")","[","]"]:
+            count=count+1
+
 
             continue
         elif c in "{[(":
@@ -21,8 +23,9 @@ def multi_bracket_validation(input):
 
         else:
             return False
-     
 
+    if count==len(input):
+            return False
     return len(stack) == 0
 
 
@@ -30,7 +33,6 @@ def multi_bracket_validation(input):
 
 
 
-print(multi_bracket_validation("{jnbn}"))
+print(multi_bracket_validation("[}"))
 
-a=[5,4,3]
-print(len(a)-1)
+
