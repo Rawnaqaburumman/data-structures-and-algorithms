@@ -1,4 +1,4 @@
-from code_challenges.stack_and_queue.animal_shelter import *
+from code_challenges.stack_and_queue.animal_shelter.animal_shelter import *
 import pytest
 
 
