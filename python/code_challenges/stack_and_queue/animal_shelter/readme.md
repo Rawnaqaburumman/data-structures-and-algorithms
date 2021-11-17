@@ -16,6 +16,7 @@
 
 
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+### Approach/ Effitincy:
 
 I took the approach of creating a class for dog and cat and take instances from Queue class in AnimalShelter class .
 I added the attributes name,type for each dog, cat class. and check it in enqueuing and dequeuing
