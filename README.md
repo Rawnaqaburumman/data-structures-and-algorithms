@@ -38,4 +38,5 @@ To run your tests
 |Stack and queue| [readme](https://github.com/Rawnaqaburumman/data-structures-and-algorithms/blob/main/python/code_challenges/stack_and_queue/read.md)
 |stack-queue-pseudo|[readme](https://github.com/Rawnaqaburumman/data-structures-and-algorithms/blob/main/python/code_challenges/stack_and_queue/readme.md)
 |animal_shelter|[readme](https://github.com/Rawnaqaburumman/data-structures-and-algorithms/blob/main/python/code_challenges/stack_and_queue/animal_shelter/readme.md)
+|stack_queue_brackets|[readme](https://github.com/Rawnaqaburumman/data-structures-and-algorithms/blob/main/python/code_challenges/stack_and_queue/stack_queue_brackets/readme.md)
 
