@@ -113,47 +113,7 @@ class AnimalShelter() :
 
 
 if __name__ == "__main__":
-    # dog1 = Dog("dog1")
-    # dog2 = Dog("dog2")
-    # dog3 =Dog("dog3")
-    # cat1=Cat("cat1")
-    # cat2=Cat("cat2")
-    # cat3=Cat("cat3")
-    # lion=OtherAnimals("lion")
-    # mouse=OtherAnimals("mouse")
-    # shelter= AnimalShelter()
-    # shelter.enqueue(dog1)
-    # shelter.enqueue(dog2)
-    # shelter.enqueue(dog3)
-    # shelter.enqueue(cat3)
-    # shelter.enqueue(lion)
 
-
-
-
-
-    # print(shelter.dog)
-    # print(shelter.cat)
-    # print(shelter.otherAnimals)
-    # cat1=Cat("cat1")
-    # cat2=Cat("cat2")
-    # cat3=Cat("cat3")
-    # lion=OtherAnimals("lion")
-    # mouse=OtherAnimals("mouse")
-    # shelter= AnimalShelter()
-    # shelter.enqueue(cat1)
-    # shelter.enqueue(cat2)
-
-    # actual= shelter.otherAnimals
-    # print(actual)
-
-
-    # lion=OtherAnimals("lion")
-    # mouse=OtherAnimals("mouse")
-    # shelter= AnimalShelter()
-    # shelter.enqueue(lion)
-    # shelter.enqueue(lion)
-    # print( shelter.enqueue(lion))
 
     cat1 = Cat("cat1")
     cat2= Cat("cat2")
@@ -168,10 +128,4 @@ if __name__ == "__main__":
 
 
 
-    # # print(shelter)
-
-
-    # shelter.dequeue('dog')
-    # print(shelter.dog)
-    # print(shelter.dequeue("lion"))
 
