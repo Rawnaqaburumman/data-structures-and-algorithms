@@ -1,55 +1,42 @@
-class Node:
-   def __init__(self,value):
-       self.value=value
-       self.next=None
-class LinkedList:
-    def __init__(self):
-        self.head=None
-    def insert(self,value):
-        node = Node(value)
-        node.next = self.head
-        self.head = node
-    def reverseList(self,list):
-                listt=list
-                previous = None
-                current = list.head
-                following = current.next
-                while current:
-                    current.next = previous
-                    previous = current
-                    current = following
-                    if following:
-                        following = following.next
-                list.head = previous
+# Python3 program to keep track of
+# maximum element in a stack
 
-                if listt == list:
-                   return True
-                else:
-                       return False
+class StackWithMax:
+	def __init__(self):
 
 
-    def __str__(self):
-        result = ""
-        if self.head is None:
-            result += None
-        else:
-            current = self.head
-            while(current):
-                result += "{ "+str(current.value)+" } -> "
-                current = current.next
-            result += "NULL"
-            return result
+		self.mainStack = []
 
 
+		self.trackStack = []
 
-if __name__=="__main__":
-    newlist=LinkedList()
+	def push(self, x):
+		self.mainStack.append(x)
+		if (len(self.mainStack) == 1):
+			self.trackStack.append(x)
+			return
 
-    newlist.insert(1)
-    newlist.insert(2)
-    newlist.insert(3)
-    newlist.insert(2)
-    newlist.insert(1)
-    newlist.reverseList(newlist)
-    print(newlist)
-print (newlist.reverseList(newlist))
+
+		if (x > self.trackStack[-1]):
+			self.trackStack.append(x)
+		else:
+			self.trackStack.append(self.trackStack[-1])
+
+	def getMax(self):
+		return self.trackStack[-1]
+
+	def pop(self):
+		self.mainStack.pop()
+		self.trackStack.pop()
+
+
+if __name__ == '__main__':
+
+	s = StackWithMax()
+	s.push(20)
+	print(s.getMax())
+	s.push(10)
+	print(s.getMax())
+	s.push(50)
+	print(s.getMax())
+
