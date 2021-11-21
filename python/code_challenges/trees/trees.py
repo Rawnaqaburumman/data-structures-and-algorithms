@@ -46,13 +46,20 @@ class BinaryTree (Node) :
 
 
     def post_order(self, root):
-        output = []
-        if root:
-            output = output + self.post_order(root.left)
-            output = output + self.post_order(root.right)
-            output.append(root.value)
+        output=[]
+        if self.root is None :
+            raise Exception("its empty Tree")
+        def traverse(root):
+            if root.left:
+                traverse(root.left)
 
-        return output
+
+            if root.right:
+                traverse(root.right)
+            output.append (root.value)
+        traverse (self.root)
+        return (output )
+
 
 
 
@@ -71,7 +78,7 @@ class  Binary_Search (BinaryTree) :
                     else:
                         traverse(root.left)
 
-                elif value > root.value:
+                else :
                     if root.right is None :
                         root.right=Node(value)
                         return
