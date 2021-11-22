@@ -8,7 +8,7 @@ class Node:
     def __str__(self):
         return str(self.value)
 
-
+#===========================================Binary tree class=============================
 class BinaryTree (Node) :
     def __init__(self,root=None):
         self.root=root
@@ -77,7 +77,7 @@ class BinaryTree (Node) :
             return self.max
 
         return tree(self.root)
-
+#============================Binary search tree class=====================================
 
 class  Binary_Search(BinaryTree) :
 
