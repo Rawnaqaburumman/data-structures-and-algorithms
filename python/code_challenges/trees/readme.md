@@ -14,6 +14,18 @@ Trees Data Structure represent nodes connected by edges.
     - Contains
 
 
+## White Board:
+
+
+
+![](max_tree.PNG)
+
+
+
+
+
+
+
 
 ## Approach & Efficiency
 - max: time O(n), space O(1)

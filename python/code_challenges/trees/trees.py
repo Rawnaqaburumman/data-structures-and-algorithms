@@ -46,16 +46,37 @@ class BinaryTree (Node) :
 
 
     def post_order(self, root):
-        output = []
-        if root:
-            output = output + self.post_order(root.left)
-            output = output + self.post_order(root.right)
-            output.append(root.value)
-
-        return output
-
+        output=[]
+        if self.root is None :
+            raise Exception("its empty Tree")
+        def traverse(root):
+            if root.left:
+                traverse(root.left)
 
 
+            if root.right:
+                traverse(root.right)
+            output.append (root.value)
+        traverse (self.root)
+        return (output )
+
+
+    def max_number(self):
+
+        if not self.root:
+                return "Tree is Empty"
+
+        self.max=self.root.value
+        def tree(node):
+            if node.value>self.max:
+                self.max=node.value
+            if node.left:
+                tree(node.left)
+            if node.right:
+                tree(node.right)
+            return self.max
+
+        return tree(self.root)
 
 
 class  Binary_Search (BinaryTree) :
@@ -71,7 +92,7 @@ class  Binary_Search (BinaryTree) :
                     else:
                         traverse(root.left)
 
-                elif value > root.value:
+                else :
                     if root.right is None :
                         root.right=Node(value)
                         return
@@ -101,10 +122,9 @@ class  Binary_Search (BinaryTree) :
         return traverse(self.root)
 
 
-#--------------------------------------------------------------------------------------
 
-
-# if __name__ == "__main__":
+#========================================================================================
+if __name__ == "__main__":
     node1 = Node(1)
     node1.left = Node(2)
     node1.right = Node(3)
@@ -114,6 +134,7 @@ class  Binary_Search (BinaryTree) :
     print(binarytree.pre_order())  #1, 2, 4, 5, 3
     print (binarytree.in_order()) #4, 2, 5, 1, 3
     print (binarytree.post_order(node1)) #4, 5, 2, 3, 1
+    print(binarytree.max_number())
 
 
 
