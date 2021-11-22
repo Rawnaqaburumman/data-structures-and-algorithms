@@ -79,7 +79,7 @@ class BinaryTree (Node) :
         return tree(self.root)
 
 
-class  Binary_Search (BinaryTree) :
+class  Binary_Search(BinaryTree) :
 
     def add(self,value) :
         if self.root:

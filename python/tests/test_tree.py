@@ -79,3 +79,27 @@ def test_return_a_collection_from_a_post_order_traversal():
 
 
 
+def test_max_val():
+    b_tree=Binary_Search()
+    b_tree.root=Node(2)
+    b_tree.root.left=Node(7)
+    b_tree.root.left.left=Node(2)
+    b_tree.root.left.right=Node(6)
+    b_tree.root.left.right.left=Node(5)
+    b_tree.root.left.right.left=Node(11)
+    b_tree.root.right=Node(5)
+    b_tree.root.right.right=Node(9)
+    b_tree.root.right.right.left=Node(4)
+
+
+    actual=b_tree.max_number()
+    expected=11
+    assert actual==expected
+
+
+def test_max_empty_val():
+    b_tree=Binary_Search()
+    actual=b_tree.max_number()
+    excepted="Tree is Empty"
+    assert actual==excepted
+
