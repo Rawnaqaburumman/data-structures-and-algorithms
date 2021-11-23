@@ -1,4 +1,6 @@
 from code_challenges.trees.tree_breadth_first import *
+import pytest
+from pytest import raises
 def test_breadth_first():
 
     node1 = Node(1)
@@ -12,3 +14,13 @@ def test_breadth_first():
     actual = breadth_first(binary_tree)
 
     assert actual == expected
+
+    
+def test_empty_tree():
+
+  binary_treee = BinaryTree()
+
+  excepted="its empty Tree"
+  with pytest.raises(Exception):
+        assert breadth_first(binary_treee)
+
