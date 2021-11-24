@@ -77,7 +77,7 @@ class BinaryTree (Node) :
         return (output )
 #===============================================================================
 def breadth_first(tree):
-        print(tree.root)
+        # print(tree.root)
         test_Queue=Queue()
         if tree.root is None :
          raise Exception("its empty Tree")
