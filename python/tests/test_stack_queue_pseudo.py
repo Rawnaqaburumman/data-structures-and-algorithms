@@ -46,8 +46,10 @@ def test_pseudo_queue_enqueue_value(pseudo_queue_1):
   queue.enqueue(5)
   queue.enqueue(6)
   queue.dequeue()
+  
   expected = 5
   actual = queue.dequeue()
+
   assert actual == expected
 
 
