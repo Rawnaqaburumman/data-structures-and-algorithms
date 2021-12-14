@@ -1,4 +1,4 @@
-from linked_list.singly_linked_list.linked_list import *
+from code_challenges.tree_intersection.linked_list import *
 
 
 # class Node:
