@@ -42,3 +42,4 @@ To run your tests
 |Trees| [readme](https://github.com/Rawnaqaburumman/data-structures-and-algorithms/blob/main/python/code_challenges/trees/readme.md)|
 |Breadth-first| [readme](https://github.com/Rawnaqaburumman/data-structures-and-algorithms/blob/tree-breadth-first/python/code_challenges/trees/breadthreadme.md)|
 |Fizz-Buzz k ary| [readme](https://github.com/Rawnaqaburumman/data-structures-and-algorithms/blob/main/python/code_challenges/trees/fizz_buzz_readme.md)|
+|tree_intersection| [readme](https://github.com/Rawnaqaburumman/data-structures-and-algorithms/blob/tree-intersection/python/code_challenges/tree_intersection/readme.md)
