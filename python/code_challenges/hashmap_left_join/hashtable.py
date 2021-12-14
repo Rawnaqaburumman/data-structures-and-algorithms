@@ -1,4 +1,4 @@
-from code_challenges.tree_intersection.linked_list import *
+from code_challenges.hashmap_left_join.linked_list import LinkedList
 
 
 
@@ -41,8 +41,7 @@ class HashTable:
                 chain.append((existing_pair))
                 chain.append(new_pair)
                 return new_pair
-        # if type(  self.map[hashed_key])== list:
-        #      self.map[hashed_key]= self.map[hashed_key][1]
+
 
     def get(self, key):
         hashed_key=self.hash(key)
