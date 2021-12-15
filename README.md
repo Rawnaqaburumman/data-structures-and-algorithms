@@ -43,4 +43,5 @@ To run your tests
 |Breadth-first| [readme](https://github.com/Rawnaqaburumman/data-structures-and-algorithms/blob/tree-breadth-first/python/code_challenges/trees/breadthreadme.md)|
 |Fizz-Buzz k ary| [readme](https://github.com/Rawnaqaburumman/data-structures-and-algorithms/blob/main/python/code_challenges/trees/fizz_buzz_readme.md)|
 |Hash table |[readme](https://github.com/Rawnaqaburumman/data-structures-and-algorithms/blob/hashtable/python/code_challenges/hashtable/readme.md)
+|Repeated word| [readme](https://github.com/Rawnaqaburumman/data-structures-and-algorithms/blob/hashmap-repeated-word/python/code_challenges/repeated_word/readme.md)
 |Hash map left join|[readme](https://github.com/Rawnaqaburumman/data-structures-and-algorithms/blob/hashmap-left-join/python/code_challenges/hashmap_left_join/readme.md)
