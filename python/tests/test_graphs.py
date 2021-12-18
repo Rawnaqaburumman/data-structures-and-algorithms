@@ -1,4 +1,4 @@
-from code_challenges.graph.graph import Graph,Edge,Vertex,Queue
+from code_challenges.graphs.graphs import Graph,Edge,Vertex,Queue
 import pytest
 
 def test_add_node():
@@ -26,7 +26,7 @@ def test_size():
 
     graph = Graph()
 
-    graph.add_node('bella')
+    graph.add_node('corrn')
 
     expected = 1
 
@@ -63,11 +63,11 @@ def test_get_nodes():
 
     graph = Graph()
 
-    salsabil = graph.add_node('salsabil')
+    rawnaq = graph.add_node('rawnaq')
 
-    jamal = graph.add_node('jamal')
+    raed = graph.add_node('raed')
 
-    mislat = Vertex('mislat')
+    aburumman = Vertex('aburumman')
 
     expected = 2
 
