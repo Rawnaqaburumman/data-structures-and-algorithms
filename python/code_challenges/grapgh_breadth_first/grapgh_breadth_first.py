@@ -72,7 +72,9 @@ class Graph:
 
         return len(self._adj_list)
 
-    def breadth_first_search(self,start_vertex):
+    ## code challenge 36
+
+    def breadth_first(self,start_vertex):
 
         queue=Queue()
         visited=set()
@@ -85,54 +87,54 @@ class Graph:
         while len(queue):
             current_vertex = queue.dequeue()
 
-        neighbors = self.get_neighbors(current_vertex)
+            neighbors = self.get_neighbors(current_vertex)
 
-        for edge in neighbors:
-            neighbor = edge.vertex
+            for edge in neighbors:
+                neighbor = edge.vertex
 
-            if neighbor not in visited:
-                queue.enqueue(neighbor)
-                visited.add(neighbor)
-                result.append(neighbor.value)
+                if neighbor not in visited:
+                    queue.enqueue(neighbor)
+                    visited.add(neighbor)
+                    result.append(neighbor.value)
 
         return result
 
 
 
-
-
 if __name__=="__main__":
+
+    # val1=graph.add_node("A")
+    # val2=graph.add_node("B")
+    # val3=graph.add_node("C")
+    # graph.add_edge(val1,val2,50)
+    # graph.add_edge(val1,val3,1)
+    # graph.add_edge(val2,val3,1)
     graph=Graph()
-    val1=graph.add_node("A")
-    val2=graph.add_node("B")
-    val3=graph.add_node("C")
-    graph.add_edge(val1,val2,50)
-    graph.add_edge(val1,val3,1)
-    graph.add_edge(val2,val3,1)
     g1 = graph.add_node(1)
-
     g2 = graph.add_node(2)
-
     g3 = graph.add_node(3)
-
     g4 = graph.add_node(4)
-
     g5 = graph.add_node(5)
-
+    g6 = graph.add_node(6)
     graph.add_edge(g1,g2,1)
-    graph.add_edge(g1,g3,1)
-    graph.add_edge(g1,g4,1)
-    graph.add_edge(g1,g5,1)
+    # graph.add_edge(g2,g1,1)
+    # graph.add_edge(g3,g1,1)
+    # graph.add_edge(g4,g1,1)
+    # graph.add_edge(g5,g1,1)
+    graph.add_edge(g2,g1,1)
+    graph.add_edge(g2,g3,1)
+    graph.add_edge(g3,g2,1)
+    graph.add_edge(g3,g4,1)
+    graph.add_edge(g4,g3,2)
 
-    graph.add_edge(g1,g3,2)
+    graph.add_edge(g4,g5,4)
 
-    graph.add_edge(g2,g4,4)
+    graph.add_edge(g5,g6,8)
 
-    graph.add_edge(g3,g4,8)
+    graph.add_edge(g6,g5,3)
 
-    graph.add_edge(g3,g5,3)
+    # graph.add_edge(g4,g5,5)
 
-    graph.add_edge(g4,g5,5)
-
-    graph.add_edge(g5,g1,10)
-    print(graph.breadth_first_search(g1))
+    # graph.add_edge(g5,g1,10)
+    print(graph.breadth_first(g2))
+    
