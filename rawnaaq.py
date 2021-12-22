@@ -425,3 +425,133 @@ class Solution:
         res = []
         dfs(root)
         return res
+
+# 404
+
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+     def sumOfLeftLeaves(self,root):
+
+        def sum_leaves(root , summing):
+            if root.left:
+                if not root.left.left and not root.left.right:
+                    summing += root.left.val
+                summing = sum_leaves(root.left, summing)
+
+            if root.right:
+                summing =sum_leaves(root.right, summing)
+
+            return summing
+        return sum_leaves(root,0)
+
+
+#637
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def averageOfLevels(self, root: Optional[TreeNode]) -> List[float]:
+        q = [root]
+        result = []
+        while(q):
+            summation = 0
+            numberOfNode = len(q)
+            for i in range(numberOfNode):
+                node = q.pop(0)
+                summation += node.val
+                if node.left:
+                    q.append(node.left)
+                if node.right:
+                    q.append(node.right)
+            result.append(summation / numberOfNode)
+
+        return result
+
+
+#other solution
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def averageOfLevels(self, root: Optional[TreeNode]) -> List[float]:
+        q = deque([root])
+        result = []
+        while(q):
+            summation = 0
+            numberOfNode = len(q)
+            for i in range(numberOfNode):
+                node = q.popleft()
+                summation += node.val
+                if node.left:
+                    q.append(node.left)
+                if node.right:
+                    q.append(node.right)
+            result.append(summation / numberOfNode)
+
+        return result
+# Binary tree path
+
+class Solution:
+    def binaryTreePaths(self, root):
+        def dfs(root, output = ''):
+            if not root:
+                return "empty list"
+            if not root.left and not root.right:
+                tmp.append(str(root.val))
+                res.append("->".join(tmp))
+                tmp.pop()
+                return
+            tmp.append(str(root.val))
+            dfs(root.left)
+            dfs(root.right)
+            tmp.pop()
+        tmp = []
+        res = []
+        dfs(root)
+        return res
+
+
+#653
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def findTarget(self, root: Optional[TreeNode], k: int) -> bool:
+        # it will work only with in order and binary search tree
+        def inorder(tree):
+            if tree:
+                inorder(tree.left)
+                arr.append(tree.val)
+                inorder(tree.right)
+# it is sorted as in the left small num and in the right bigger
+        arr = []
+        inorder(root)
+        left = 0
+        #to take the last element in the array len(7)-1
+        right = len(arr)-1
+
+        while left < right:
+            if arr[left]+arr[right] == k:
+                return True
+            # checking the num is grater than the left and the right we will increase the left other than that it will decrese the right
+            elif arr[left]+arr[right] < k:
+                   left += 1
+            else:
+                right -= 1
+
+
+        return False
